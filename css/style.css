@@ -1,0 +1,124 @@
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --dark_grayish_blue: hsl(217, 19%, 35%);
+    --dark_blackish_blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light_gray: #cfcfcf;
+    --light_grayish_blue: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.testimonials {
+    width: 80%;
+    margin-top: 7rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "t1 t1 t2 t5"
+    "t3 t4 t4 t5"
+    ;
+    gap: 1.4rem;
+
+}
+.testimonial {
+    padding: 1.4rem;
+    border-radius: .8rem;
+    box-shadow: 2px 3px 21px -1px rgba(207,207,207,0.75);
+}
+.user {
+    margin-bottom: .8rem;
+    display: flex;
+    gap: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+}
+.user__image {
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid var(--dark_grayish_blue);
+}
+.user__img {
+    display: block;
+    width: 100%;
+}
+.user__name {
+    font-size: .6rem;
+    color: var(--white);
+}
+.user__name--gray {
+    color: var(--dark_grayish_blue);
+}
+.user__verificated {
+    font-size: .5rem;
+    color: var(--light_gray)
+}
+.user__verificated--gray {
+    color: var(--dark_blackish_blue);
+}
+.testimonial__h2 {
+    margin-bottom: .8rem;
+    font-size: .8rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color: var(--white);
+}
+.testimonial__p {
+    margin-bottom: .8rem;
+    font-size: .6rem;
+    line-height: 1rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    color: var(--light_gray);
+}
+
+.testimonial__h2--gray,
+.testimonial__h2--p {
+    color: var(--dark_grayish_blue);
+}
+
+.testimonial--t1{
+    grid-area: t1;
+    background-color: var(--violet);
+}
+.testimonial--t2 {
+    grid-area: t2;
+    background-color: var(--dark_grayish_blue);
+}
+.testimonial--t3 {
+    grid-area: t3;
+    background-color: var(--white);
+}
+.testimonial--t4 {
+    grid-area: t4;
+    background-color: var(--dark_blackish_blue);
+}
+.testimonial--t5 {
+    grid-area: t5;
+    background-color: var(--white);
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .testimonials {
+        margin-top: 2rem;
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "t1"
+        "t2"
+        "t3"
+        "t4"
+        "t5"
+        ;
+    }
+}
+
